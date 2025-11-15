@@ -1,10 +1,8 @@
-# Dark/Light Mode Toggle Implementation
+# TODO: Integrate Social Media Links Component into Projects Page
 
 ## Tasks
-- [x] Create theme context and provider for state management
-- [x] Create useTheme custom hook with localStorage persistence
-- [x] Create ThemeToggle component with sun/moon icons
-- [x] Update layout.tsx to include ThemeProvider and apply theme class
-- [x] Update Header.tsx to include ThemeToggle in navigation (desktop and mobile)
-- [x] Test toggle functionality and responsiveness
-- [x] Verify theme persistence across page reloads
+- [x] Adapt the provided SCSS styles to match the site's color scheme (acid-lime, carbon, off-white, etc.)
+- [x] Add the adapted styles to globals.css
+- [x] Add a new "Connect with Us" section to projects/page.tsx after the CTA section
+- [x] Test the page to ensure the component renders correctly and animations work
+- [ ] Adjust social media links if necessary (currently placeholders from the provided HTML)

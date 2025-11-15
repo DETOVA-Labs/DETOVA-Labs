@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Shield, Eye, UserCheck, Scale, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import AnimatedTavarnTitle from "@/components/AnimatedTavarnTitle"
 
 export default function ProjectsPage() {
   const pillars = [
@@ -38,9 +39,7 @@ export default function ProjectsPage() {
       {/* Hero */}
       <section className="hero-generative relative py-32 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center max-w-4xl relative z-10">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            Tavarn<span className="text-[var(--acid-lime)]">.AI</span>
-          </h1>
+          <AnimatedTavarnTitle />
           <p className="text-2xl text-[var(--silver)] mb-8">
             The Trust Layer for Web3 Gaming.
           </p>
@@ -54,7 +53,7 @@ export default function ProjectsPage() {
             <div className="text-center">
               <div className="mono text-6xl text-[var(--acid-lime)] mb-4">▶</div>
               <p className="text-[var(--silver)]">Video Placeholder</p>
-              <p className="text-sm text-[var(--silver)] mt-2">Replace with YouTube embed URL</p>
+              <p className="text-sm text-[var(--silver)] mt-2">https://youtu.be/OtA7TqxT9no?si=7K2BFemqf6_TJmjM</p>
             </div>
           </div>
         </div>
@@ -128,6 +127,26 @@ export default function ProjectsPage() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Connect with Us */}
+      <section className="social-links-section">
+        <div className="text">
+          <h1>CONNECT</h1>
+        </div>
+        <div className="about">
+          <div className="bg_links"></div>
+          <div className="logo"></div>
+          <div className="social portfolio">
+            <div className="icon"></div>
+          </div>
+          <div className="social dribbble">
+            <div className="icon"></div>
+          </div>
+          <div className="social linkedin">
+            <div className="icon"></div>
+          </div>
         </div>
       </section>
     </div>

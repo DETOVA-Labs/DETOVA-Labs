@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Github, Linkedin, Youtube } from "lucide-react"
 import { useState } from "react"
 import toast from "react-hot-toast"
+import SocialMediaLinks from './SocialMediaLinks'
 
 // X (Twitter) Logo SVG Component
 function XLogo({ className }: { className?: string }) {
@@ -55,7 +56,7 @@ export default function Footer() {
     { name: "X (Twitter)", icon: XLogo, href: "https://x.com/detovalabs" },
     { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/company/detovalabs" },
     { name: "GitHub", icon: Github, href: "https://github.com/detovalabs" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com/@DetovalabsHQ" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@DetovaLab" },
   ]
 
   const legalLinks = [
@@ -119,6 +120,9 @@ export default function Footer() {
                   <social.icon className="h-5 w-5" />
                 </a>
               ))}
+            </div>
+            <div className="mt-4">
+              <SocialMediaLinks />
             </div>
           </div>
         </div>

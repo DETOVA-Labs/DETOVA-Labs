@@ -88,9 +88,9 @@ export default function AnimatedTagline() {
         if (!tagline) return
         const current = tagline.innerHTML
         tagline.innerHTML = ''
-        requestAnimationFrame(() => {
+        setTimeout(() => {
           tagline.innerHTML = current
-        })
+        }, 10)
       }
 
       ctrl.addButton({ title: 'Restart' }).on('click', reanimate)

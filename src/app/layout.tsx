@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import CommandMenu from "@/components/CommandMenu";
 import CubeBackground from "@/components/CubeBackground";
 import { Toaster } from "react-hot-toast";
-import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Detova Labs | Global Innovation Studio Building Web2 & Web3 Solutions",
@@ -43,31 +42,29 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
-        <ThemeProvider>
-          <CubeBackground />
-          <Header />
-          <CommandMenu />
-          <main className="min-h-screen pt-16 relative z-10">
-            {children}
-          </main>
-          <Footer />
-          <Toaster
-            position="bottom-right"
-            toastOptions={{
-              style: {
-                background: 'white',
-                color: 'var(--deep-grey)',
-                border: '1px solid var(--border-color)',
+        <CubeBackground />
+        <Header />
+        <CommandMenu />
+        <main className="min-h-screen pt-16 relative z-10">
+          {children}
+        </main>
+        <Footer />
+        <Toaster
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              background: 'white',
+              color: 'var(--deep-grey)',
+              border: '1px solid var(--border-color)',
+            },
+            success: {
+              iconTheme: {
+                primary: 'var(--acid-lime)',
+                secondary: 'var(--carbon)',
               },
-              success: {
-                iconTheme: {
-                  primary: 'var(--acid-lime)',
-                  secondary: 'var(--carbon)',
-                },
-              },
-            }}
-          />
-        </ThemeProvider>
+            },
+          }}
+        />
       </body>
     </html>
   );

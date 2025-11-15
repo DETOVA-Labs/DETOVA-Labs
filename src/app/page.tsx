@@ -6,6 +6,7 @@ import { ArrowRight, ExternalLink, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import AnimatedTagline from "@/components/AnimatedTagline"
+import DroppingTexts from "@/components/DroppingTexts"
 
 interface LabFeedItem {
   text: string
@@ -65,12 +66,15 @@ export default function Home() {
         <div className="particle" />
         <div className="particle" />
 
+        {/* Dropping Texts Animation */}
+        <DroppingTexts />
+
         <div className="container mx-auto text-center max-w-5xl relative z-10">
           <div className="mb-8 animate-fade-in-up">
             <AnimatedTagline />
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up">
-            Where <span className="text-shimmer">Ideas</span> Become <span className="text-shimmer">Impact</span>.
+            Where <span className="text-shimmer">Ideas</span> Meet Innovation.
           </h1>
           <p className="text-xl sm:text-2xl text-[var(--deep-grey)] mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             <strong className="text-shimmer">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-shimmer">Web2</strong> and <strong className="text-shimmer">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url(https://fonts.bunny.net/css?family=playfair-display:600);
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
@@ -75,26 +76,7 @@
   --ring: var(--acid-lime);
 }
 
-.dark {
-  --background: var(--carbon);
-  --foreground: var(--off-white);
-  --card: var(--slate);
-  --card-foreground: var(--off-white);
-  --popover: var(--slate);
-  --popover-foreground: var(--off-white);
-  --primary: var(--acid-lime);
-  --primary-foreground: var(--carbon);
-  --secondary: var(--slate);
-  --secondary-foreground: var(--off-white);
-  --muted: var(--slate);
-  --muted-foreground: var(--silver);
-  --accent: var(--acid-lime);
-  --accent-foreground: var(--carbon);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: var(--border-color);
-  --input: var(--border-color);
-  --ring: var(--acid-lime);
-}
+
 
 @layer base {
   * {
@@ -107,7 +89,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
-    color: var(--deep-grey);
+    color: var(--foreground);
   }
   code, pre, .mono {
     font-family: 'JetBrains Mono', monospace;
@@ -213,7 +195,7 @@
 }
 
 .text-shimmer {
-  background: linear-gradient(90deg, var(--deep-grey) 0%, var(--acid-lime) 50%, var(--deep-grey) 100%);
+  background: linear-gradient(90deg, var(--foreground) 0%, var(--acid-lime) 50%, var(--foreground) 100%);
   background-size: 200% auto;
   color: transparent;
   background-clip: text;
@@ -529,6 +511,174 @@
   }
   75% {
     transform: rotateX(270deg) rotateY(270deg);
+  }
+}
+
+/* Animated Tavarn Title Styles */
+@keyframes pop-word {
+  to {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bar-scale {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1) translate(4px, 1px) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(0) translate(4px, 1px) rotate(8deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    text-shadow: 0 0 8px var(--acid-lime);
+  }
+}
+
+.animated-tavarn-title {
+  color: var(--deep-grey);
+  font-family: "Playfair Display", Vidaloka, serif;
+  font-size: 8rem;
+
+  line-height: 0.85;
+  perspective: 500px;
+}
+
+.animated-tavarn-title .word {
+  display: block;
+
+  animation: show 0.01s forwards, pop-word 1.5s forwards;
+  animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+  opacity: 0;
+
+  transform: rotateX(120deg);
+  transform-origin: 50% 100%;
+}
+
+.animated-tavarn-title .word.tavarn-ai {
+  padding: 0 2rem;
+
+  animation-delay: 1.5s;
+
+  color: var(--acid-lime);
+}
+
+.animated-tavarn-title .word .superscript {
+  position: relative;
+  animation-delay: 3.6s;
+
+  animation-duration: 0.25s;
+  animation-name: shimmer;
+
+  vertical-align: text-top;
+}
+
+/* bars */
+.animated-tavarn-title .word .superscript::before {
+  --bar-width: 25%;
+
+  position: absolute;
+
+  top: 37%;
+  left: 47%;
+  width: 14%;
+  height: 48%;
+
+  animation: bar-scale 0.25s linear 3s 1 forwards;
+
+  background: linear-gradient(
+    to right,
+    var(--deep-grey) var(--bar-width),
+    transparent var(--bar-width) calc(100% - var(--bar-width)),
+    var(--deep-grey) calc(100% - var(--bar-width))
+  );
+
+  content: "";
+
+  transform: scaleY(0);
+}
+
+/* sparkle */
+.animated-tavarn-title .word .superscript::after {
+  --size: 10rem;
+
+  position: absolute;
+
+  top: -5%;
+  left: -85%;
+
+  width: var(--size);
+  height: var(--size);
+
+  animation: sparkle 0.4s linear 3.5s 1 forwards;
+
+  background: radial-gradient(
+      circle at center,
+      rgba(245, 245, 245, 0.94) 0% 7%,
+      transparent 7% 100%
+    ),
+    conic-gradient(
+      transparent 0deg 18deg,
+      rgba(253, 244, 215, 0.4) 18deg,
+      transparent 20deg 40deg,
+      rgba(253, 244, 215, 0.4) 40deg,
+      transparent 43deg 87deg,
+      rgba(253, 244, 215, 0.4) 87deg,
+      transparent 95deg 175deg,
+      rgba(253, 244, 215, 0.4) 175deg,
+      transparent 178deg 220deg,
+      rgba(253, 244, 215, 0.4) 220deg,
+      transparent 222deg 270deg,
+      rgba(253, 244, 215, 0.4) 270deg,
+      transparent 275deg 300deg,
+      rgba(253, 244, 215, 0.4) 300deg,
+      transparent 303deg 360deg
+    );
+
+  border-radius: 50%;
+  clip-path: polygon(
+    50% 0,
+    59.13% 26.64%,
+    85.13% -2.35%,
+    100% 50%,
+    50% 100%,
+    0 50%,
+    31.39% 34.86%
+  );
+
+  content: "";
+
+  filter: blur(1px);
+
+  transform: scale(0);
+}
+
+@media screen and (max-width: 600px) {
+  .animated-tavarn-title {
+    font-size: 5rem;
+  }
+
+  /* sparkle */
+  .animated-tavarn-title .word .superscript::after {
+    --size: 6rem;
   }
 }
 

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
-import { ThemeToggle } from "@/components/ThemeToggle"
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -77,7 +77,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
             <Button asChild className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold">
               <Link href="/internship">Build with the Lab</Link>
             </Button>
@@ -106,9 +105,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center justify-center pt-2">
-              <ThemeToggle />
-            </div>
+
             <Button asChild className="w-full bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold">
               <Link href="/internship" onClick={() => setIsMenuOpen(false)}>Build with the Lab</Link>
             </Button>
