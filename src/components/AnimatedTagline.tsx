@@ -5,8 +5,8 @@ import { useEffect } from 'react'
 export default function AnimatedTagline() {
   useEffect(() => {
     // Import Tweakpane dynamically to avoid SSR issues
-    import('tweakpane').then((Tweakpane) => {
-      const Pane = Tweakpane.Pane
+    import('tweakpane').then((module) => {
+      const Pane = (module as any).Pane
 
       const config = {
         theme: 'system',
@@ -25,11 +25,11 @@ export default function AnimatedTagline() {
       const update = () => {
         const root = document.documentElement
         root.dataset.theme = config.theme
-        root.style.setProperty('--base-delay', config.delay)
-        root.style.setProperty('--cross-delay', config.crossd)
-        root.style.setProperty('--cross-speed', config.cross)
-        root.style.setProperty('--dot-delay', config.dotd)
-        root.style.setProperty('--dot-speed', config.dot)
+        root.style.setProperty('--base-delay', `${config.delay}s`)
+        root.style.setProperty('--cross-delay', `${config.crossd}s`)
+        root.style.setProperty('--cross-speed', `${config.cross}s`)
+        root.style.setProperty('--dot-delay', `${config.dotd}s`)
+        root.style.setProperty('--dot-speed', `${config.dot}s`)
       }
 
       const sync = (event: any) => {
@@ -88,14 +88,16 @@ export default function AnimatedTagline() {
         if (!tagline) return
         const current = tagline.innerHTML
         tagline.innerHTML = ''
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           tagline.innerHTML = current
-        }, 10)
+        })
       }
 
       ctrl.addButton({ title: 'Restart' }).on('click', reanimate)
       ctrl.on('change', sync)
       update()
+    }).catch((error) => {
+      console.error('Failed to load Tweakpane:', error)
     })
   }, [])
 
@@ -105,10 +107,11 @@ export default function AnimatedTagline() {
       viewBox="0 0 800 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ width: '100%', height: 'auto' }}
     >
       <defs>
         <mask id="textMask">
-          <rect width="100%" height="100%" fill="green" />
+          <rect width="100%" height="100%" fill="white" />
           <text
             x="50%"
             y="60%"

@@ -6,7 +6,9 @@ import { ArrowRight, ExternalLink, Sparkles } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import AnimatedTagline from "@/components/AnimatedTagline"
+import BuildingTagline from "@/components/BuildingTagline"
 import DroppingTexts from "@/components/DroppingTexts"
+import CubeBackground from "@/components/CubeBackground";
 
 interface LabFeedItem {
   text: string
@@ -46,35 +48,25 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+       <CubeBackground />
       {/* Hero Section - Animated with Dynamic Background */}
       <section
-        id="home"
-        className="hero-generative dynamic-background relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-[var(--off-white)] section-highlightable"
-        onClick={handleSectionClick}
-        tabIndex={0}
-        role="banner"
-        aria-label="Hero section"
+        
+        
+        
+        
       >
-        {/* Tech Grid Overlay */}
-        <div className="tech-grid" />
-
-        {/* Floating Particles */}
-        <div className="particle" />
-        <div className="particle" />
-        <div className="particle" />
-        <div className="particle" />
-        <div className="particle" />
-        <div className="particle" />
+     
 
         {/* Dropping Texts Animation */}
-        <DroppingTexts />
+      
 
         <div className="container mx-auto text-center max-w-5xl relative z-10">
           <div className="mb-8 animate-fade-in-up">
-            <AnimatedTagline />
+            <BuildingTagline showRestart={false} />
           </div>
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up">
-            Where <span className="text-shimmer">Ideas</span> Meet Innovation.
+            Where <span className="text-[var(--acid-lime)]">Ideas</span> Meet Innovation.
           </h1>
           <p className="text-xl sm:text-2xl text-[var(--deep-grey)] mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             <strong className="text-shimmer">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-shimmer">Web2</strong> and <strong className="text-shimmer">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>
@@ -101,12 +93,12 @@ export default function Home() {
 
       {/* What We Do Section - Enhanced with Animations */}
       <section 
-        id="services"
-        className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
-        onClick={handleSectionClick}
-        tabIndex={0}
-        aria-label="What we do"
-      >
+  id="services"
+  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+  onClick={handleSectionClick}
+  tabIndex={0}
+  aria-label="What we do"
+>
         <div className="tech-grid" />
         <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="text-4xl font-bold mb-4 text-center animate-fade-in-up">
@@ -176,12 +168,12 @@ export default function Home() {
 
       {/* Lab Feed Section - Enhanced */}
       <section 
-        id="updates"
-        className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
-        onClick={handleSectionClick}
-        tabIndex={0}
-        aria-label="Lab feed"
-      >
+  id="updates"
+  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
+  onClick={handleSectionClick}
+  tabIndex={0}
+  aria-label="Lab feed"
+>
         <div className="tech-grid" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-4xl font-bold mb-4 animate-slide-in-left">
@@ -227,12 +219,12 @@ export default function Home() {
 
       {/* Featured Project - Enhanced */}
       <section 
-        id="projects"
-        className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
-        onClick={handleSectionClick}
-        tabIndex={0}
-        aria-label="Featured project"
-      >
+  id="projects"
+  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+  onClick={handleSectionClick}
+  tabIndex={0}
+  aria-label="Featured project"
+>
         <div className="tech-grid" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -264,12 +256,12 @@ export default function Home() {
 
       {/* Internship CTA - Enhanced */}
       <section 
-        id="internship"
-        className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[var(--off-white)] to-white section-highlightable" 
-        onClick={handleSectionClick}
-        tabIndex={0}
-        aria-label="Internship program"
-      >
+  id="internship"
+  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
+  onClick={handleSectionClick}
+  tabIndex={0}
+  aria-label="Internship program"
+>
         <div className="tech-grid" />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
           <h2 className="text-4xl font-bold mb-4 animate-fade-in-up">

@@ -56,7 +56,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-[var(--off-white)]/95 backdrop-blur-md border-b border-[var(--border-color)]">
+    <header className="fixed top-0 w-full z-50 bg-black backdrop-blur-md border-b border-gray-800">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
@@ -72,7 +72,7 @@ export default function Header() {
                 onClick={(e) => {
                   handleNavClick(item.href)
                 }}
-                className="text-[var(--deep-grey)] hover:text-[var(--acid-lime)] transition-colors text-sm font-medium"
+                className="text-white hover:text-[var(--acid-lime)] transition-colors text-sm font-medium"
               >
                 {item.name}
               </Link>
@@ -85,7 +85,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-[var(--deep-grey)]"
+            className="md:hidden text-white"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -94,12 +94,12 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-[var(--border-color)]">
+          <div className="md:hidden py-4 space-y-4 border-t border-gray-800">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-[var(--deep-grey)] hover:text-[var(--acid-lime)] transition-colors"
+                className="block text-white hover:text-[var(--acid-lime)] transition-colors"
                 onClick={() => handleNavClick(item.href)}
               >
                 {item.name}
