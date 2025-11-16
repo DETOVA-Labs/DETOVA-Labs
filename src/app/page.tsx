@@ -50,35 +50,36 @@ export default function Home() {
     <div className="flex flex-col">
        <CubeBackground />
       {/* Hero Section - Animated with Dynamic Background */}
-      <section className="relative hero-generative overflow-hidden">
+      <section className="relative hero-generative overflow-hidden min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
      
 
         {/* Dropping Texts Animation */}
       
 
-        <div className="container mx-auto text-center max-w-5xl relative z-10">
-          <div className="mb-8 animate-fade-in-up text-white">
+        <div className="container mx-auto text-center max-w-5xl relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="mb-6 sm:mb-8 animate-fade-in-up text-white">
             <BuildingTagline showRestart={false} />
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up text-white drop-shadow-lg">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 animate-fade-in-up text-white drop-shadow-lg leading-tight">
             Where <span className="text-[var(--acid-lime)]">Ideas</span> Meet Innovation.
           </h1>
-          <p className="text-xl sm:text-2xl text-white drop-shadow-md mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white drop-shadow-md mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             <strong className="text-white">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-white">Web2</strong> and <strong className="text-white">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>
           </p>
-          <p className="text-lg text-white drop-shadow-md mb-8 max-w-3xl mx-auto animate-fade-in-up delay-400">
+          <p className="text-sm xs:text-base sm:text-lg text-white drop-shadow-md mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-400">
             From blockchain gaming infrastructure and decentralized applications to AI-powered productivity tools, we specialize in <span className="text-white">cutting-edge technology</span> that solves real-world problems. We train the next generation of builders by giving them hands-on experience shipping actual products, not doing busywork.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-500">
-            <Button asChild size="lg" className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold text-lg shadow-lg hover:shadow-xl transition-all">
+          <div className="flex flex-col sm:flex-col md:flex-row gap-2 xs:gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in-up delay-500">
+            <Button asChild size="sm" className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold text-sm xs:text-base sm:text-lg shadow-lg hover:shadow-xl transition-all">
               <Link href="/projects">
-                <Sparkles className="mr-2 h-5 w-5" />
-                Explore our Projects
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Sparkles className="mr-1 xs:mr-2 h-4 xs:h-5 w-4 xs:w-5" />
+                <span className="hidden xs:inline">Explore our Projects</span>
+                <span className="xs:hidden">Projects</span>
+                <ArrowRight className="ml-1 xs:ml-2 h-4 xs:h-5 w-4 xs:w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg border-2 border-[var(--deep-grey)] text-[var(--deep-grey)] hover:bg-[var(--acid-lime)]/10 hover:border-[var(--acid-lime)] transition-all shadow-md">
+            <Button asChild size="sm" variant="outline" className="text-sm xs:text-base sm:text-lg border-2 border-[var(--deep-grey)] text-[var(--deep-grey)] hover:bg-[var(--acid-lime)]/10 hover:border-[var(--acid-lime)] hover:text-white transition-all shadow-md">
               <Link href="/internship">
                 Build with the Lab
               </Link>
@@ -174,10 +175,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="tech-grid" />
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-4xl font-bold mb-4 animate-slide-in-left text-white drop-shadow-lg">
+          <h2 className="text-4xl font-bold mb-4 animate-slide-in-left text-white drop-shadow-lg text-center">
             The <span className="text-[var(--acid-lime)]">Lab Feed</span>. <span className="text-[var(--acid-lime)]">(Proof of Work.)</span>
           </h2>
-          <p className="text-white drop-shadow-md mb-8 animate-slide-in-left delay-100">
+          <p className="text-white drop-shadow-md mb-8 animate-slide-in-left delay-100 text-center">
             Real-time updates from our lab showing what we're <span className="text-white">building and shipping</span>.
           </p>
           

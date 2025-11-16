@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   creator: "Detova Labs",
   publisher: "Detova Labs",
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.jpeg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
