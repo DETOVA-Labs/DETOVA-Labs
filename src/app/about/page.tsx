@@ -28,15 +28,16 @@ export default function AboutPage() {
       {/* Hero */}
       <section 
         id="about-hero"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[var(--off-white)] to-white section-highlightable" 
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[var(--off-white)] to-white section-highlightable" 
         onClick={handleSectionClick}
         tabIndex={0}
       >
-        <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-[var(--deep-grey)]">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             We Are a Global <span className="text-[var(--acid-lime)]">Innovation Studio</span>.
           </h1>
-          <p className="text-xl text-[var(--deep-grey)] leading-relaxed">
+          <p className="text-xl text-white drop-shadow-md leading-relaxed">
             Detova Labs is an innovative, focused, and global team. We're a collective of engineers, designers, and strategists obsessed with turning ideas into impact. We build solutions across <strong>Web2 and Web3</strong>, bridging traditional and decentralized technologies to create products that matter.
           </p>
         </div>
@@ -45,16 +46,17 @@ export default function AboutPage() {
       {/* Mission */}
       <section 
         id="about-mission"
-        className="py-20 px-4 sm:px-6 lg:px-8 section-highlightable" 
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 section-highlightable" 
         onClick={handleSectionClick}
         tabIndex={0}
       >
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6 text-[var(--deep-grey)]">Our Mission</h2>
-          <p className="text-lg text-[var(--deep-grey)] leading-relaxed mb-4">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">Our Mission</h2>
+          <p className="text-lg text-white drop-shadow-md leading-relaxed mb-4">
             We don't theorize. We build. Every product we ship is designed to solve real problems with real impact. From modern web applications to blockchain infrastructure, we operate at the intersection of <strong>Web2 and Web3</strong>.
           </p>
-          <p className="text-lg text-[var(--deep-grey)] leading-relaxed">
+          <p className="text-lg text-white drop-shadow-md leading-relaxed">
             From Web3 gaming infrastructure to AI-powered tools, we're building the future one launch at a time. We train the next generation by building alongside them, not above them—giving them hands-on experience with production systems, smart contracts, and cutting-edge technologies.
           </p>
         </div>
@@ -63,12 +65,13 @@ export default function AboutPage() {
       {/* Team */}
       <section 
         id="about-team"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
         onClick={handleSectionClick}
         tabIndex={0}
       >
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold mb-12 text-center text-[var(--deep-grey)]">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <h2 className="text-4xl font-bold mb-12 text-center text-white drop-shadow-lg">
             The <span className="text-[var(--acid-lime)]">Core Team</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -90,12 +93,13 @@ export default function AboutPage() {
       {/* Values */}
       <section 
         id="about-values"
-        className="py-20 px-4 sm:px-6 lg:px-8 section-highlightable" 
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 section-highlightable" 
         onClick={handleSectionClick}
         tabIndex={0}
       >
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-8 text-center text-[var(--deep-grey)]">Our Values</h2>
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h2 className="text-4xl font-bold mb-8 text-center text-white drop-shadow-lg">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="p-6 bg-white border-[var(--border-color)] text-center hover:border-[var(--acid-lime)] transition-all">
               <h3 className="text-2xl font-bold mb-2 text-[var(--acid-lime)]">Ship Fast</h3>

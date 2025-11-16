@@ -37,10 +37,11 @@ export default function ProjectsPage() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="hero-generative relative py-32 px-4 sm:px-6 lg:px-8">
+      <section className="hero-generative relative overflow-hidden py-32 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <AnimatedTavarnTitle />
-          <p className="text-2xl text-[var(--silver)] mb-8">
+          <p className="text-2xl text-white drop-shadow-md mb-8">
             The Trust Layer for Web3 Gaming.
           </p>
         </div>
@@ -60,21 +61,23 @@ export default function ProjectsPage() {
       </section>
 
       {/* Problem */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">The Industry is Failing on <span className="text-[var(--acid-lime)]">Trust</span>.</h2>
-          <p className="text-lg text-[var(--silver)] leading-relaxed">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">The Industry is Failing on <span className="text-[var(--acid-lime)]">Trust</span>.</h2>
+          <p className="text-lg text-white drop-shadow-md leading-relaxed">
             The Web3 gaming market is crippled by developer rugs, bot-driven economies, and anonymous bad actors. Players can't trust studios, and studios can't trust players. The current infrastructure incentivizes short-term extraction over long-term ecosystem health. This isn't just a technical problem—it's a systemic failure of trust architecture.
           </p>
         </div>
       </section>
 
       {/* Solution */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--slate)]">
-        <div className="container mx-auto max-w-6xl">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[var(--slate)]">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl font-bold mb-6">A 4-Pillar <span className="text-[var(--acid-lime)]">"Trust Stack"</span>.</h2>
-            <p className="text-lg text-[var(--silver)] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">A 4-Pillar <span className="text-[var(--acid-lime)]">"Trust Stack"</span>.</h2>
+            <p className="text-lg text-white drop-shadow-md max-w-3xl mx-auto">
               We're building a holistic protocol that addresses trust at every layer of the Web3 gaming ecosystem.
             </p>
           </div>
@@ -93,10 +96,11 @@ export default function ProjectsPage() {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl font-bold mb-6">Built on <span className="text-[var(--acid-lime)]">Somnia</span>.</h2>
-          <p className="text-lg text-[var(--silver)] leading-relaxed mb-6">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-lg">Built on <span className="text-[var(--acid-lime)]">Somnia</span>.</h2>
+          <p className="text-lg text-white drop-shadow-md leading-relaxed mb-6">
             Tavarn.AI is deployed on Somnia, a high-performance blockchain purpose-built for real-time gaming applications. With sub-second finality and massive throughput, we can process complex economic calculations and trust computations at the speed games demand.
           </p>
           <div className="flex flex-wrap gap-3">
@@ -113,12 +117,13 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[var(--slate)]">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-4">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-[var(--slate)]">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h2 className="text-4xl font-bold mb-4 text-white drop-shadow-lg">
             Want to Learn <span className="text-[var(--acid-lime)]">More</span>?
           </h2>
-          <p className="text-[var(--silver)] text-lg mb-8">
+          <p className="text-white drop-shadow-md text-lg mb-8">
             We're actively seeking partners and collaborators in the Web3 gaming space.
           </p>
           <Button asChild size="lg" className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold text-lg">

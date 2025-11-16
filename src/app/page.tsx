@@ -61,13 +61,10 @@ export default function Home() {
           <div className="mb-6 sm:mb-8 animate-fade-in-up text-white">
             <BuildingTagline showRestart={false} />
           </div>
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 animate-fade-in-up text-white drop-shadow-lg leading-tight">
-            Where <span className="text-[var(--acid-lime)]">Ideas</span> Meet Innovation.
-          </h1>
-          <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white drop-shadow-md mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+          <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-white drop-shadow-md mb-3 sm:mb-4 max-w-4xl mx-auto leading-relaxed animate-slide-in-left delay-200">
             <strong className="text-white">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-white">Web2</strong> and <strong className="text-white">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>
           </p>
-          <p className="text-sm xs:text-base sm:text-lg text-white drop-shadow-md mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-400">
+          <p className="text-sm xs:text-base sm:text-lg text-white drop-shadow-md mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-in-right delay-400">
             From blockchain gaming infrastructure and decentralized applications to AI-powered productivity tools, we specialize in <span className="text-white">cutting-edge technology</span> that solves real-world problems. We train the next generation of builders by giving them hands-on experience shipping actual products, not doing busywork.
           </p>
           <div className="flex flex-col sm:flex-col md:flex-row gap-2 xs:gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 animate-fade-in-up delay-500">

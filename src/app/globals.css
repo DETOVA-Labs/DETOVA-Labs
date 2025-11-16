@@ -159,6 +159,58 @@
   }
 }
 
+/* Performance & Accessibility Improvements */
+:root {
+  --anim-ease: cubic-bezier(0.22, 0.9, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Promote animated layers to the compositor and hint the browser about upcoming changes */
+.animate-fade-in-up,
+.animate-slide-in-left,
+.animate-slide-in-right,
+.animate-scale-in,
+.animate-glitch,
+.cube-background .wall,
+.dynamic-background::before,
+.dynamic-background::after,
+.hero-generative::before,
+.hero-generative::after,
+.building-tagline .construct,
+.building-tagline .claw,
+.building-tagline .dot {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Soften heavy glows on low-performance devices */
+.text-glow {
+  filter: drop-shadow(0 0 6px var(--acid-lime));
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  :root { --anim-ease: linear; }
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+    scroll-behavior: auto;
+  }
+  .cube-background,
+  .dynamic-background::before,
+  .dynamic-background::after,
+  .hero-generative::before,
+  .hero-generative::after {
+    animation: none !important;
+  }
+}
+
 @keyframes float-slow {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -621,7 +673,7 @@
 }
 
 .animated-tavarn-title {
-  color: var(--deep-grey);
+  color: white;
   font-family: "Playfair Display", Vidaloka, serif;
   font-size: 8rem;
 

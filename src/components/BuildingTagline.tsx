@@ -59,7 +59,9 @@ export default function BuildingTagline({
 
   return (
     <header ref={headerRef} className="building-tagline">
-      
+      <h1 className="construct construct--horizontal text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white drop-shadow-lg leading-tight">
+        Where <span className="text-[var(--bt-accent)]">Ideas</span> Meet <span className="construct construct--vertical">Innovation</span>.
+      </h1>
 
       {showRestart && (
         <button type="button" onClick={reanimate} className="sr-only">
