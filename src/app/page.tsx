@@ -50,29 +50,25 @@ export default function Home() {
     <div className="flex flex-col">
        <CubeBackground />
       {/* Hero Section - Animated with Dynamic Background */}
-      <section
-        
-        
-        
-        
-      >
+      <section className="relative hero-generative overflow-hidden">
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
      
 
         {/* Dropping Texts Animation */}
       
 
         <div className="container mx-auto text-center max-w-5xl relative z-10">
-          <div className="mb-8 animate-fade-in-up">
+          <div className="mb-8 animate-fade-in-up text-white">
             <BuildingTagline showRestart={false} />
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 animate-fade-in-up text-white drop-shadow-lg">
             Where <span className="text-[var(--acid-lime)]">Ideas</span> Meet Innovation.
           </h1>
-          <p className="text-xl sm:text-2xl text-[var(--deep-grey)] mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            <strong className="text-shimmer">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-shimmer">Web2</strong> and <strong className="text-shimmer">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>
+          <p className="text-xl sm:text-2xl text-white drop-shadow-md mb-4 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+            <strong className="text-white">Detova Labs</strong> is a global innovation studio that builds and ships product-ready solutions across <strong className="text-white">Web2</strong> and <strong className="text-white">Web3</strong>. <span className="animate-fade-in-up delay-300 inline-block">We transform ideas into production-ready applications through rapid prototyping, development, and deployment.</span>
           </p>
-          <p className="text-lg text-[var(--muted-foreground)] mb-8 max-w-3xl mx-auto animate-fade-in-up delay-400">
-            From blockchain gaming infrastructure and decentralized applications to AI-powered productivity tools, we specialize in <span className="text-shimmer">cutting-edge technology</span> that solves real-world problems. We train the next generation of builders by giving them hands-on experience shipping actual products, not doing busywork.
+          <p className="text-lg text-white drop-shadow-md mb-8 max-w-3xl mx-auto animate-fade-in-up delay-400">
+            From blockchain gaming infrastructure and decentralized applications to AI-powered productivity tools, we specialize in <span className="text-white">cutting-edge technology</span> that solves real-world problems. We train the next generation of builders by giving them hands-on experience shipping actual products, not doing busywork.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up delay-500">
             <Button asChild size="lg" className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold text-lg shadow-lg hover:shadow-xl transition-all">
@@ -94,18 +90,19 @@ export default function Home() {
       {/* What We Do Section - Enhanced with Animations */}
       <section 
   id="services"
-  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+  className="relative overflow-hidden dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
   onClick={handleSectionClick}
   tabIndex={0}
   aria-label="What we do"
 >
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="tech-grid" />
         <div className="container mx-auto max-w-7xl relative z-10">
-          <h2 className="text-4xl font-bold mb-4 text-center animate-fade-in-up">
-            What We <span className="text-shimmer">Build</span>
+          <h2 className="text-4xl font-bold mb-4 text-center animate-fade-in-up text-white drop-shadow-lg">
+            What We <span className="text-[var(--acid-lime)]">Build</span>
           </h2>
-          <p className="text-center text-[var(--muted-foreground)] mb-12 max-w-2xl mx-auto animate-fade-in-up delay-100">
-            We specialize in building <span className="text-shimmer">innovative solutions</span> across multiple domains — from Web3 gaming infrastructure to AI-powered enterprise tools
+          <p className="text-center text-white drop-shadow-md mb-12 max-w-2xl mx-auto animate-fade-in-up delay-100">
+            We specialize in building <span className="text-white">innovative solutions</span> across multiple domains — from Web3 gaming infrastructure to AI-powered enterprise tools
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="p-6 bg-[var(--off-white)] border-[var(--border-color)] card-hover animate-scale-in delay-100">
@@ -169,18 +166,19 @@ export default function Home() {
       {/* Lab Feed Section - Enhanced */}
       <section 
   id="updates"
-  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
+  className="relative overflow-hidden dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
   onClick={handleSectionClick}
   tabIndex={0}
   aria-label="Lab feed"
 >
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="tech-grid" />
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-4xl font-bold mb-4 animate-slide-in-left">
-            The <span className="text-shimmer">Lab Feed</span>. <span className="text-[var(--acid-lime)]">(Proof of Work.)</span>
+          <h2 className="text-4xl font-bold mb-4 animate-slide-in-left text-white drop-shadow-lg">
+            The <span className="text-[var(--acid-lime)]">Lab Feed</span>. <span className="text-[var(--acid-lime)]">(Proof of Work.)</span>
           </h2>
-          <p className="text-[var(--deep-grey)] mb-8 animate-slide-in-left delay-100">
-            Real-time updates from our lab showing what we're <span className="text-shimmer">building and shipping</span>.
+          <p className="text-white drop-shadow-md mb-8 animate-slide-in-left delay-100">
+            Real-time updates from our lab showing what we're <span className="text-white">building and shipping</span>.
           </p>
           
           {loading ? (
@@ -220,20 +218,21 @@ export default function Home() {
       {/* Featured Project - Enhanced */}
       <section 
   id="projects"
-  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+  className="relative overflow-hidden dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
   onClick={handleSectionClick}
   tabIndex={0}
   aria-label="Featured project"
 >
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="tech-grid" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left">
-              <h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-                Featured Project: <span className="text-shimmer">Tavarn.AI</span>
+              <h2 className="text-4xl font-bold mb-4 animate-fade-in-up text-white drop-shadow-lg">
+                Featured Project: <span className="text-[var(--acid-lime)]">Tavarn.AI</span>
               </h2>
-              <p className="text-[var(--deep-grey)] text-lg mb-6 leading-relaxed animate-fade-in-up delay-100">
-                An <span className="text-shimmer">autonomous market protocol</span> for game economies built on Somnia blockchain. We're solving the systemic failures of trust and transparency in <span className="text-shimmer">Web3 gaming</span> through AI-powered market intelligence and on-chain verification systems.
+              <p className="text-white text-lg mb-6 leading-relaxed drop-shadow-md animate-fade-in-up delay-100">
+                An <span className="text-white">autonomous market protocol</span> for game economies built on Somnia blockchain. We're solving the systemic failures of trust and transparency in <span className="text-white">Web3 gaming</span> through AI-powered market intelligence and on-chain verification systems.
               </p>
               <div className="animate-fade-in-up delay-200">
                 <Button asChild className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold shadow-lg hover:shadow-xl transition-all">
@@ -257,21 +256,22 @@ export default function Home() {
       {/* Internship CTA - Enhanced */}
       <section 
   id="internship"
-  className="dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
+  className="relative overflow-hidden dynamic-background py-20 px-4 sm:px-6 lg:px-8 bg-[var(--off-white)] section-highlightable" 
   onClick={handleSectionClick}
   tabIndex={0}
   aria-label="Internship program"
 >
+        <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" aria-hidden="true" />
         <div className="tech-grid" />
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-4 animate-fade-in-up">
-            We Don't Do <span className="text-shimmer">Coffee Runs</span>.
+          <h2 className="text-4xl font-bold mb-4 animate-fade-in-up text-white drop-shadow-lg">
+            We Don't Do <span className="text-[var(--acid-lime)]">Coffee Runs</span>.
           </h2>
-          <p className="text-[var(--deep-grey)] text-lg mb-4 leading-relaxed animate-fade-in-up delay-100">
-            Our interns <span className="text-shimmer">ship real products</span>. We provide a platform for you to build a verifiable portfolio and get a share in the revenue you help create.
+          <p className="text-white text-lg mb-4 leading-relaxed drop-shadow-md animate-fade-in-up delay-100">
+            Our interns <span className="text-white">ship real products</span>. We provide a platform for you to build a verifiable portfolio and get a share in the revenue you help create.
           </p>
-          <p className="text-[var(--muted-foreground)] mb-8 animate-fade-in-up delay-200">
-            Join our internship program and work on <span className="text-shimmer">actual production applications</span>, contribute to open-source projects, and learn from experienced developers in a fully remote environment. Build your portfolio while earning revenue share.
+          <p className="text-white drop-shadow-md mb-8 animate-fade-in-up delay-200">
+            Join our internship program and work on <span className="text-white">actual production applications</span>, contribute to open-source projects, and learn from experienced developers in a fully remote environment. Build your portfolio while earning revenue share.
           </p>
           <div className="animate-fade-in-up delay-300">
             <Button asChild size="lg" className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 font-semibold text-lg shadow-lg hover:shadow-xl transition-all">
