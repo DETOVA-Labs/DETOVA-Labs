@@ -8,7 +8,7 @@ import { useEffect, useState } from "react"
 import AnimatedTagline from "@/components/AnimatedTagline"
 import BuildingTagline from "@/components/BuildingTagline"
 import DroppingTexts from "@/components/DroppingTexts"
-import CubeBackground from "@/components/CubeBackground";
+import CubeBackground from "@/components/CubeBackground"
 
 interface LabFeedItem {
   text: string
