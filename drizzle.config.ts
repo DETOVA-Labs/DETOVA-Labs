@@ -1,6 +1,10 @@
 
 import { defineConfig } from 'drizzle-kit';
+import { config } from 'dotenv';
 import type { Config } from 'drizzle-kit';
+
+// Load environment variables from .env.local
+config({ path: '.env.local' });
 
 const dbConfig: Config = defineConfig({
   schema: './src/db/schema.ts',
