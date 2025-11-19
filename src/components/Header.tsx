@@ -60,7 +60,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Detova Labs" width={190} height={190} priority />
+            <Image src="/logo.jpeg" alt="Detova Labs" width={60} height={60} priority />
           </Link>
 
           {/* Desktop Navigation */}
