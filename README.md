@@ -73,7 +73,8 @@ We believe in hands-on learning and provide a platform for the next generation o
    Create a `.env.local` file in the root directory and add the following variables:
    ```env
    # Database
-   DATABASE_URL=your-turso-database-url
+   TURSO_CONNECTION_URL=your-turso-connection-url
+   TURSO_AUTH_TOKEN=your-turso-auth-token
 
    # Firebase
    NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
