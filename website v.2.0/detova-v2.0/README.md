@@ -72,26 +72,10 @@ We believe in hands-on learning and provide a platform for the next generation o
 3. **Set up environment variables:**
    Create a `.env.local` file in the root directory and add the following variables:
    ```env
-   # Database
-   TURSO_CONNECTION_URL=your-turso-connection-url
-   TURSO_AUTH_TOKEN=your-turso-auth-token
+   # Database - Turso
+   DATABASE_URL=libsql://detovadb-detova-labs.aws-us-east-1.turso.io
 
-   # Firebase
-   NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-firebase-auth-domain
-   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-firebase-project-id
-   NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-firebase-storage-bucket
-   NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-firebase-messaging-sender-id
-   NEXT_PUBLIC_FIREBASE_APP_ID=your-firebase-app-id
-
-   # Stripe
-   STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
-   STRIPE_SECRET_KEY=your-stripe-secret-key
-   STRIPE_WEBHOOK_SECRET=your-stripe-webhook-secret
-
-   # Better Auth
-   BETTER_AUTH_SECRET=your-better-auth-secret
-   BETTER_AUTH_URL=http://localhost:3000
+   #Firebase
    ```
 
 4. **Set up the database:**

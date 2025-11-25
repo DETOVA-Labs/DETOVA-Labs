@@ -46,12 +46,14 @@ export default function RootLayout({
       </head>
       <body>
         <CubeBackground />
-        <Header />
-        <CommandMenu />
-        <main className="min-h-screen pt-16 relative z-10">
-          {children}
-        </main>
-        <Footer />
+        <div className="relative z-10 min-h-screen flex flex-col">
+          <Header />
+          <CommandMenu />
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+          <Footer className="relative z-20" />
+        </div>
         <Toaster
           position="bottom-right"
           toastOptions={{

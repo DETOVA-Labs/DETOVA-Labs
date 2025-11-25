@@ -18,7 +18,7 @@ function XLogo({ className }: { className?: string }) {
   )
 }
 
-export default function Footer() {
+export default function Footer({ className }: { className?: string }) {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -29,7 +29,7 @@ export default function Footer() {
     setIsSubmitting(true)
     try {
       const { db, isFirebaseConfigured } = await import("@/lib/firebase")
-      
+
       if (!isFirebaseConfigured || !db) {
         toast.error("Newsletter signup is temporarily unavailable.")
         setIsSubmitting(false)
@@ -68,34 +68,34 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-white border-t border-[var(--border-color)]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer className={`bg-[var(--slate)] border-t border-[var(--border-color)] ${className || ''}`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Brand */}
-          <div>
+          <div className="text-center md:text-left">
             <Link href="/" className="inline-block mb-4">
-              <Image src="/logo.svg" alt="Detova Labs" width={120} height={36} />
+              <Image src="/logo.png" alt="Detova Labs" width={120} height={76} className="w-24 sm:w-30 h-auto" />
             </Link>
-            <p className="text-[var(--deep-grey)] text-sm">
+            <p className="text-[var(--silver)] text-sm leading-relaxed">
               A global innovation studio that builds and ships product-ready solutions across Web2 and Web3.
             </p>
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="text-[var(--deep-grey)] font-bold mb-4">Stay in the Lab</h3>
-            <p className="text-[var(--muted-foreground)] text-sm mb-4">Get our newsletter.</p>
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+          <div className="text-center md:text-left">
+            <h3 className="text-white font-bold mb-4 text-lg">Stay in the Lab</h3>
+            <p className="text-[var(--silver)] text-sm mb-4">Get our newsletter.</p>
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2 max-w-xs mx-auto md:mx-0">
               <Input
                 type="email"
                 placeholder="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="bg-white border-[var(--border-color)] text-[var(--deep-grey)]"
+                className="bg-[var(--carbon)] border-[var(--border-color)] text-white placeholder-[var(--silver)] flex-1"
                 required
               />
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="bg-[var(--acid-lime)] text-[var(--carbon)] hover:bg-[var(--acid-lime)]/90 whitespace-nowrap"
               >
@@ -105,39 +105,42 @@ export default function Footer() {
           </div>
 
           {/* Socials */}
-          <div>
-            <h3 className="text-[var(--deep-grey)] font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+          <div className="text-center md:text-left">
+            <h3 className="text-white font-bold mb-4 text-lg">Follow Us</h3>
+            <div className="flex justify-center md:justify-start gap-4 mb-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--deep-grey)] hover:text-[var(--acid-lime)] transition-colors"
+                  className="text-[var(--silver)] hover:text-[var(--acid-lime)] transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
                 </a>
               ))}
             </div>
-            <div className="mt-4">
+            <div className="flex justify-center md:justify-start">
               <SocialMediaLinks />
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-[var(--border-color)] flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[var(--muted-foreground)] text-sm">
-            © {currentYear} Detova Labs. All rights reserved.
-          </p>
-          <div className="flex gap-6">
+        <div className="pt-6 sm:pt-8 border-t border-[var(--border-color)] flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+            <Image src="/logo.png" alt="Detova Labs" width={80} height={24} className="w-16 sm:w-20 h-auto" />
+            <p className="text-[var(--silver)] text-sm">
+              © {currentYear} All rights reserved.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
             {legalLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-[var(--muted-foreground)] hover:text-[var(--acid-lime)] text-sm transition-colors"
+                className="text-[var(--silver)] hover:text-[var(--acid-lime)] text-sm transition-colors"
               >
                 {link.name}
               </Link>

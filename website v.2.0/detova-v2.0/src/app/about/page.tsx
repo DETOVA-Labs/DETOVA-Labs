@@ -63,9 +63,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section 
+      {/* <section
         id="about-team"
-        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable" 
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-white section-highlightable"
         onClick={handleSectionClick}
         tabIndex={0}
       >
@@ -88,7 +88,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Values */}
       <section 
