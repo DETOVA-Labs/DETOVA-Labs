@@ -478,8 +478,8 @@ html {
   overflow: hidden;
 }
 
-/* Disable cube background on smaller devices to prevent scrolling issues */
-@media (max-width: 1024px) {
+/* Disable cube background on mobile devices to prevent scrolling issues */
+@media (max-width: 768px) {
   .cube-background {
     display: none;
   }
