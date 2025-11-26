@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-    "drizzle:push": "drizzle-kit push"
+        "drizzle:push": "drizzle-kit push",
+        "deploy:vercel-hook": "curl -X POST https://api.vercel.com/v1/integrations/deploy/prj_FdzrMYAVJ611tLux9nDARKrVomDC/eNq9ZQKgHc"
     },
     "dependencies": {
         "@babel/parser": "^7.28.5",
